@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  gateway:
+    build: .
+    ports: ["8000:8000"]
+    env_file: .env
+    volumes: ["./gateway.db:/app/gateway.db"]
+    command: python src/main.py
+  dashboard:
+    build: .
+    ports: ["8501:8501"]
+    env_file: .env
+    volumes: ["./gateway.db:/app/gateway.db"]
+    command: streamlit run src/dashboard.py --server.port 8501

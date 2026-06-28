@@ -1,0 +1,14 @@
+teams:
+  engineering:
+    api_key: "team-eng-key-123"
+    allowed_models: ["gpt-4o", "gpt-4o-mini", "claude-haiku"]
+    rate_limit: {rpm: 60, tpm: 100000}
+    monthly_budget_usd: 100.0
+    providers: ["openai", "anthropic"]
+
+  marketing:
+    api_key: "team-mkt-key-456"
+    allowed_models: ["gpt-4o-mini"]
+    rate_limit: {rpm: 30, tpm: 50000}
+    monthly_budget_usd: 20.0
+    providers: ["openai"]
