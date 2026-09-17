@@ -1,0 +1,214 @@
+# Target list for Srija's outreach. Researched 2026-09-17.
+#
+# Scope: LLM gateway / observability / eval / agent-infra companies. Deliberately
+# narrow. Her two strongest proof points (Comet AI, a multi-provider LLM gateway
+# at 25k users, and a merged PR in BerriAI/litellm) are exactly what these
+# companies build, so a short list here beats a long list of generic AI startups.
+#
+# Fields
+#   short_name - used in the subject line
+#   category   - selects the angle/proof point (compose.py ANGLES)
+#   channel    - how she can actually reach them:
+#                  founder_email  - they publish a founder address and invite contact
+#                  role_inbox     - a published hello@/contact@ style address
+#                  form           - web form only, no address published
+#                  ats            - Ashby/Greenhouse board; apply, don't cold email
+#                  unknown        - needs scrape.py run from an unrestricted network
+#   contact    - ONLY a verified, publicly published address. Never a guess.
+#   recipient  - first name, when writing to a named person
+#   status     - anything that changes whether she should write at all
+#   note       - a verifiable fact about them, used as the email's opening line.
+#                Blank = compose.py refuses to invent one and blocks the draft.
+#   priority   - 1 = send now, 2 = second wave, 3 = only if expanding
+#
+# NOTE ON 2026 CONSOLIDATION: this market changed hands three times in five
+# months. ClickHouse acquired Langfuse (Jan 16), Mintlify acquired Helicone
+# (Mar 3), Palo Alto Networks acquired Portkey (closed May 29, now shipping as
+# Prisma AIRS AI Gateway). Two of those are no longer sensible "startup
+# internship" targets. Kept in the file with status set, so the reason is
+# recorded rather than silently dropped.
+
+targets:
+  # ===========================================================================
+  # TIER 1 - verified address, active company, direct overlap with her work
+  # ===========================================================================
+
+  - name: BerriAI (LiteLLM)
+    short_name: LiteLLM
+    domain: berri.ai
+    category: devtools_oss
+    channel: founder_email
+    contact: krrish@berri.ai
+    recipient: Krrish
+    priority: 1
+    status: "YC W23, ~$4M seed, 53k+ GitHub stars. Publicly hiring engineers; a Head of Engineering role is posted on their YC page. Founders publish krrish@berri.ai and ishaan@berri.ai across their docs under 'Support & Talk to Founders' and invite contact on their YC profile."
+    note: "maintain litellm, the open-source gateway that calls 100+ LLMs through one OpenAI-compatible interface"
+
+  - name: E2B
+    short_name: E2B
+    domain: e2b.dev
+    category: agent_infra
+    channel: role_inbox
+    contact: hello@e2b.dev
+    priority: 1
+    status: "Publishes hello@e2b.dev as its general contact in its own repos ('Contact us at hello@e2b.dev'). enterprise@e2b.dev is sales-only; do not use it for this."
+    note: "run sandboxed cloud runtimes so AI agents can execute untrusted code safely"
+
+  - name: Langfuse
+    short_name: Langfuse
+    domain: langfuse.com
+    category: observability
+    channel: role_inbox
+    contact: contact@langfuse.com
+    priority: 2
+    status: "Acquired by ClickHouse on 2026-01-16 but still shipping as a distinct product, and a Langfuse Gateway is on their public roadmap. contact@langfuse.com is published on their legal imprint, so it is a general inbox rather than a hiring one. They also run a /careers page - worth checking before emailing."
+    note: "build open-source LLM observability with span-level tracing, and have a Langfuse Gateway on your public roadmap"
+
+  # ===========================================================================
+  # TIER 2 - good fit, but no published address found. Apply via their board,
+  # or run scrape.py from an unrestricted network to look again.
+  # ===========================================================================
+
+  - name: Braintrust
+    short_name: Braintrust
+    domain: braintrust.dev
+    category: evals
+    channel: ats
+    contact: null
+    priority: 2
+    status: "Hiring through Ashby (jobs.ashbyhq.com/Braintrust) and a /careers page. No public email. Apply to a posted role rather than cold emailing."
+    note: "run an eval-first workflow for catching agent regressions, and ship a Braintrust Gateway with caching and failover"
+
+  - name: Composio
+    short_name: Composio
+    domain: composio.dev
+    category: agent_infra
+    channel: form
+    contact: null
+    priority: 2
+    status: "Contact form only at composio.dev/contact; no published address."
+    note: "build the tool-calling and MCP layer that lets agents authenticate against external APIs"
+
+  - name: Mastra
+    short_name: Mastra
+    domain: mastra.ai
+    category: agent_infra
+    channel: form
+    contact: null
+    priority: 2
+    status: "Contact form only at mastra.ai/contact. Abhi Aiyer is founder/CTO."
+    note: "build a TypeScript agent framework with workflows, evals and tracing built in"
+
+  - name: TrueFoundry
+    short_name: TrueFoundry
+    domain: truefoundry.com
+    category: gateway
+    channel: unknown
+    contact: null
+    priority: 2
+    status: "Active, independent, ships an AI gateway. No published address found in docs; needs a scrape.py run."
+    note: "ship an AI gateway with governance and observability for enterprise LLM traffic"
+
+  - name: Unsloth
+    short_name: Unsloth
+    domain: unsloth.ai
+    category: finetuning
+    channel: unknown
+    contact: null
+    priority: 2
+    status: "Small independent team, very active open source. Contributing to the repo is likely a better first move than email."
+    note: "make QLoRA and LoRA fine-tuning substantially faster and cheaper, in the open"
+
+  - name: Patronus AI
+    short_name: Patronus
+    domain: patronus.ai
+    category: evals
+    channel: unknown
+    contact: null
+    priority: 2
+    status: "Independent. No published address found; needs a scrape.py run."
+    note: "automate evaluation and guardrails for LLM failure and policy-violation detection"
+
+  - name: Letta
+    short_name: Letta
+    domain: letta.com
+    category: agent_infra
+    channel: unknown
+    contact: null
+    priority: 3
+    status: "Independent, out of the MemGPT research."
+    note: "build stateful agents with transparent long-term memory, out of the MemGPT work"
+
+  - name: Zep AI
+    short_name: Zep
+    domain: getzep.com
+    category: agent_infra
+    channel: unknown
+    contact: null
+    priority: 3
+    status: "Independent."
+    note: "build a memory layer for agents on top of a temporal knowledge graph"
+
+  - name: Arize AI
+    short_name: Arize
+    domain: arize.com
+    category: observability
+    channel: ats
+    contact: null
+    priority: 3
+    status: "Later-stage; hires through a formal board. Maintains Phoenix."
+    note: "maintain Phoenix, open-source LLM tracing and evaluation"
+
+  - name: Traceloop
+    short_name: Traceloop
+    domain: traceloop.com
+    category: observability
+    channel: unknown
+    contact: null
+    priority: 3
+    status: "Independent. Maintains OpenLLMetry, which is vendored into several other products' tracing docs."
+    note: "maintain OpenLLMetry, the OpenTelemetry-based instrumentation standard for LLM apps"
+
+  - name: CrewAI
+    short_name: CrewAI
+    domain: crewai.com
+    category: agent_infra
+    channel: unknown
+    contact: null
+    priority: 3
+    status: "Independent, large OSS user base."
+    note: "build multi-agent orchestration with a large open-source user base"
+
+  - name: LlamaIndex
+    short_name: LlamaIndex
+    domain: llamaindex.ai
+    category: agent_infra
+    channel: unknown
+    contact: null
+    priority: 3
+    status: "Independent."
+    note: "build the data and retrieval framework a lot of production agents are standing on"
+
+  # ===========================================================================
+  # DO NOT EMAIL - acquired or wound down. Kept so the reason is on record.
+  # ===========================================================================
+
+  - name: Helicone
+    short_name: Helicone
+    domain: helicone.ai
+    category: gateway
+    channel: role_inbox
+    contact: null          # help@helicone.ai exists but see status
+    priority: 9
+    status: "SKIP. Acquired by Mintlify 2026-03-03 and the platform is in maintenance mode - security fixes, bug fixes and new model support only, feature development ended. The only published address is help@helicone.ai, a support inbox. No reason to pitch an internship here."
+    note: "built an open-source AI gateway and observability platform"
+
+  - name: Portkey
+    short_name: Portkey
+    domain: portkey.ai
+    category: gateway
+    channel: role_inbox
+    contact: null          # support@portkey.ai exists but see status
+    priority: 9
+    status: "SKIP as a startup target. Palo Alto Networks closed its acquisition 2026-05-29; the gateway now ships as Prisma AIRS AI Gateway. Palo Alto does run a real internship programme, but that is a large-company application through their careers site, not a cold email - and a different pitch."
+    note: "built the AI gateway now running as Prisma AIRS, with per-team rate limits and budget caps"
