@@ -55,9 +55,10 @@ ANGLES = {
         "ask": "Worth 15 minutes? I can also just send a short walkthrough of how it handles provider failover.",
         "subject": "LLM gateway at 25k users",
         "bridge": (
-            "I build the same thing you sell. I own Comet AI at UT Dallas: a production "
-            "gateway that puts multiple LLM providers behind one interface for 25,000+ "
-            "users, and I own its deployment, access management and reliability."
+            "I built the same thing you sell. At UT Dallas I built and ran Comet AI, a "
+            "production gateway that put multiple LLM providers behind one interface "
+            "for 25,000+ users, and owned its deployment, access management and "
+            "reliability."
         ),
         "extra": (
             "I also have a merged PR in BerriAI/litellm, hardening its safe_json_dumps "
@@ -68,24 +69,25 @@ ANGLES = {
         "ask": "Worth 15 minutes? Happy to pick up an issue off your tracker in the meantime.",
         "subject": "merged PR, internship ask",
         "bridge": (
-            "I have a merged PR in your repo. I hardened the safe_json_dumps utility "
-            "against edge-case failures, added tests, and took it through full CI and "
-            "maintainer review."
+            "I have a merged PR in your repo. I hardened safe_json_dumps against failing "
+            "custom __str__ methods and non-string keys, which was crashing "
+            "serialization in the request-logging path, added unit tests, and took it "
+            "through maintainer review, Ruff and Codecov into an upstream release."
         ),
         "extra": (
-            "Day to day I run the other side of that: Comet AI at UT Dallas, a gateway "
-            "unifying multiple LLM providers for 25,000+ users, where I own deployment "
-            "and reliability."
+            "I ran the other side of that too: Comet AI at UT Dallas, a platform "
+            "unifying multiple LLM providers for 25,000+ users, where I owned "
+            "deployment, guardrails and incident response."
         ),
     },
     "observability": {
-        "ask": "Worth 15 minutes? I can also just send what our dashboards do and do not catch today.",
+        "ask": "Worth 15 minutes? I can also send a note on what those dashboards caught and what they missed.",
         "subject": "tracing LLM traffic at 25k users",
         "bridge": (
-            "I run the thing you instrument. Comet AI at UT Dallas serves 25,000+ users "
-            "across multiple LLM providers, and I own its reliability end to end: load "
-            "testing, CI/CD, Splunk dashboards, automated alerting and incident response "
-            "across sandbox and prod."
+            "I ran the thing you instrument. Comet AI at UT Dallas served 25,000+ users "
+            "across multiple LLM providers, and I owned its reliability end to end: "
+            "load testing, CI/CD, Splunk dashboards, and automated alerting and "
+            "incident triggering across sandbox and production."
         ),
         "extra": (
             "I also built a multi-agent research system on the OpenAI Agents SDK with full "
@@ -97,13 +99,14 @@ ANGLES = {
         "ask": "Worth 15 minutes? I can also just send the eval pipeline setup.",
         "subject": "guardrail evals, internship ask",
         "bridge": (
-            "Evaluating guardrails is most of my job. On Comet AI at UT Dallas (25,000+ "
-            "users) I built multi-model evaluation pipelines and applied QLoRA fine-tuning "
-            "to stress-test guardrails and policy-violation detection, which improved "
-            "compliance detection and cut false-positive rejections."
+            "Evaluating guardrails was most of my last job. On Comet AI at UT Dallas "
+            "(25,000+ users) I built multi-model evaluation pipelines and applied QLoRA "
+            "fine-tuning to stress-test guardrails, content filtering, off-topic "
+            "rejection and policy-violation detection, which improved compliance "
+            "detection and cut false-positive rejections."
         ),
         "extra": (
-            "Its support agent now deflects about 40% of Tier-2 IT tickets through RAG "
+            "Its RAG support agent deflected about 40% of Tier-2 IT tickets, with "
             "responses kept inside policy."
         ),
     },
@@ -116,31 +119,34 @@ ANGLES = {
             "and synthesize RTL."
         ),
         "extra": (
-            "I also built MEMO, a LangGraph ReAct agent with a cross-encoder NLI classifier "
-            "that surfaces contradictions across 100-document corpora and cut inference "
-            "latency 60%. It took 3rd place in the CBRE track at WeHack."
+            "I also built MEMO, a document-grounded LangGraph ReAct agent that extracts "
+            "atomic facts into a knowledge graph and detects cross-document "
+            "contradictions with an NLI cross-encoder, so every answer traces back to "
+            "a source instead of drifting as the context fills."
         ),
     },
     "finetuning": {
         "ask": "Worth 15 minutes? I can also just send the QLoRA evaluation setup.",
         "subject": "QLoRA guardrail evals",
         "bridge": (
-            "I use QLoRA in production work, not just notebooks. On Comet AI at UT Dallas "
-            "(25,000+ users) I applied QLoRA fine-tuning and multi-model evaluation "
-            "pipelines to stress-test guardrails and policy-violation detection."
+            "I have used QLoRA on production work, not just notebooks. On Comet AI at UT "
+            "Dallas (25,000+ users) I applied QLoRA fine-tuning and multi-model "
+            "evaluation pipelines to stress-test guardrails and policy-violation "
+            "detection."
         ),
         "extra": (
-            "That work improved compliance detection and cut false-positive rejections, and "
-            "I own the platform's deployment and reliability alongside it."
+            "That work improved compliance detection and cut false-positive rejections, "
+            "and I owned the platform's deployment and reliability alongside it."
         ),
     },
     "infra": {
         "ask": "Worth 15 minutes? I can also just send the load-test and alerting setup.",
         "subject": "reliability at 25k users",
         "bridge": (
-            "I keep inference up for real users. I own Comet AI at UT Dallas, a multi-provider "
-            "LLM platform serving 25,000+ users, including load testing, CI/CD, Splunk "
-            "observability dashboards, alerting and incident response across sandbox and prod."
+            "I kept inference up for real users. I built and ran Comet AI at UT Dallas, a "
+            "multi-provider LLM platform serving 25,000+ users, including load testing, "
+            "CI/CD, Splunk observability dashboards, and alerting across sandbox and "
+            "production."
         ),
         "extra": (
             "Before that I built healthcare data pipelines and CI/CD automation on AWS at "
@@ -149,20 +155,21 @@ ANGLES = {
     },
 }
 
+# She finished the M.S. in May 2026 and can start immediately. She cannot
+# relocate, so "remote" is stated up front instead of surfacing on the call.
+AVAILABILITY = "I finished my M.S. at UT Dallas in May and can start now, remote."
+
 COMP_LINES = {
     # Honest framing that does not undersell her. Recommended default.
     "flexible": (
-        "I graduate in May 2026 and I'm looking for an internship between now and then. "
-        "I am flexible on comp and hours if the work is real."
+        f"{AVAILABILITY} I am flexible on comp and hours if the work is real."
     ),
-    # What she asked for, stated plainly.
+    # Explicit, if she wants to remove any budget friction.
     "unpaid_ok": (
-        "I graduate in May 2026 and I'm looking for an internship between now and then. "
-        "Paid or unpaid both work for me. I care more about shipping something real."
+        f"{AVAILABILITY} Paid or unpaid both work for me. I care more about "
+        "shipping something real."
     ),
-    "paid_only": (
-        "I graduate in May 2026 and I'm looking for a paid internship between now and then."
-    ),
+    "paid_only": f"{AVAILABILITY} I am looking for something paid.",
 }
 
 ASK = "Worth a 15-minute call? I can also just send a short walkthrough of the gateway."
@@ -203,6 +210,7 @@ def compose(target: dict, comp_stance: str = "flexible") -> dict:
     return {
         "company": company,
         "short_name": short,
+        "recipient": recipient,
         "domain": target.get("domain"),
         "to": target.get("contact"),
         "category": category,
