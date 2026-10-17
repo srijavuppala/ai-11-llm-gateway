@@ -76,7 +76,7 @@ targets:
     channel: ats
     contact: null
     priority: 2
-    status: "Hiring through Ashby (jobs.ashbyhq.com/Braintrust) and a /careers page. No public email. Apply to a posted role rather than cold emailing."
+    status: "Hiring through Ashby (jobs.ashbyhq.com/Braintrust) and a /careers page; a real role URL under that Ashby org was confirmed. No public email, so apply rather than cold email. Open engineering titles seen: Software Engineer (Backend / Product / Systems), Cloud Infrastructure Engineer, Eval Engineer, and open-source engineers in Go, Python and TypeScript. Eval Engineer is the closest to her Comet AI guardrail-evaluation work."
     note: "run an eval-first workflow for catching agent regressions, and ship a Braintrust Gateway with caching and failover"
 
   - name: Composio
@@ -86,7 +86,7 @@ targets:
     channel: form
     contact: null
     priority: 2
-    status: "Contact form only at composio.dev/contact; no published address."
+    status: "Contact form only at composio.dev/contact; no published address. Hires on its own careers board, not a third-party ATS. Open engineering titles seen: Member of Technical Staff - Platform Eng, Product Eng, and Research Engineer."
     note: "build the tool-calling and MCP layer that lets agents authenticate against external APIs"
 
   - name: Mastra
@@ -116,7 +116,7 @@ targets:
     channel: unknown
     contact: null
     priority: 2
-    status: "Small independent team, very active open source. Contributing to the repo is likely a better first move than email."
+    status: "Small independent team, very active open source. No job board or listings found in two searches, which for a team this size usually means hiring happens through the repo. Contributing is the better first move than email."
     note: "make QLoRA and LoRA fine-tuning substantially faster and cheaper, in the open"
 
   - name: Patronus AI
